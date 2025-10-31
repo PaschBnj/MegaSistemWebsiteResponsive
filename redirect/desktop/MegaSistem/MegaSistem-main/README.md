@@ -1,2 +1,0 @@
-# MegaSistem
-MegaSistemInformatica
