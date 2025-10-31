@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento</title>
+    <script>
+        // Função para verificar o dispositivo
+        function redirectBasedOnDevice() {
+            // Verifica se o usuário está em um dispositivo móvel
+            var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+            // URLs de redirecionamento
+            var desktopUrl = "\desktop\MegaSistem\MegaSistem-main\index.html"; // Link para PC
+            var mobileUrl = "\mobile\MegaSistem-Mobile\MegaSistem-Mobile-main\index.html"; // Link para celular
+
+            // Redireciona com base no dispositivo
+            if (isMobile) {
+                window.location.href = mobileUrl; // Para celular
+            } else {
+                window.location.href = desktopUrl; // Para PC
+            }
+        }
+
+        // Chama a função assim que a página for carregada
+        window.onload = redirectBasedOnDevice;
+    </script>
+</head>
+<body>
+    <!-- Não há conteúdo visível, pois a página faz redirecionamento imediato -->
+</body>
+</html>
