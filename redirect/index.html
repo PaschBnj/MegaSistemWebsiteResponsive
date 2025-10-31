@@ -8,7 +8,7 @@
         // Função para verificar o dispositivo com base no tamanho da tela
         function redirectBasedOnDevice() {
             // Verifica a largura da janela (tela) do dispositivo
-            var isMobile = window.innerWidth <= 768; // Largura de tela menor ou igual a 768px é um dispositivo móvel
+            var isMobile = window.innerWidth < window.innerHeight; // Largura de tela menor que a altura é um dispositivo móvel
 
             // URLs de redirecionamento
             var desktopUrl = "/desktop/MegaSistem/MegaSistem-main/index.html"; // Redireciona para a versão Desktop
@@ -30,3 +30,4 @@
     <!-- Não há conteúdo visível, pois a página faz redirecionamento imediato -->
 </body>
 </html>
+
