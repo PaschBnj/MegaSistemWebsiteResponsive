@@ -8,17 +8,17 @@
         // Função para verificar o dispositivo com base no tamanho da tela
         function redirectBasedOnDevice() {
             // Verifica a largura da janela (tela) do dispositivo
-            var isMobile = window.innerWidth < window.innerHeight; // Largura de tela menor que a altura é um dispositivo móvel
+            var isDesktop = window.innerWidth > window.innerHeight; 
 
             // URLs de redirecionamento
             var desktopUrl = "/desktop/MegaSistem/MegaSistem-main/index.html"; // Redireciona para a versão Desktop
             var mobileUrl = "/mobile/MegaSistem-Mobile/MegaSistem-Mobile-main/index.html"; // Redireciona para a versão Mobile
 
             // Redireciona com base no dispositivo
-            if (isMobile) {
-                window.location.href = mobileUrl; // Para celular
+            if (isDesktop) {
+                window.location.href = desktopUrl; // Para celular
             } else {
-                window.location.href = desktopUrl; // Para PC
+                window.location.href = mobileUrl; // Para PC
             }
         }
 
@@ -30,4 +30,5 @@
     <!-- Não há conteúdo visível, pois a página faz redirecionamento imediato -->
 </body>
 </html>
+
 
