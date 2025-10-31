@@ -7,19 +7,21 @@
     <script>
         // Função para verificar o dispositivo
         function redirectBasedOnDevice() {
-            // Verifica se o usuário está em um dispositivo móvel
-            var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            // Verifica se o usuário está em um dispositivo móvel, incluindo Safari no iPhone
+            var isMobile = /Mobi|Android|iPhone|iPad|iPod|Windows Phone|webOS|BlackBerry|IEMobile|Opera Mini|Safari/i.test(navigator.userAgent) && /iPhone|iPad/i.test(navigator.userAgent);
 
             // URLs de redirecionamento
             var desktopUrl = "/desktop/MegaSistem/MegaSistem-main/index.html"; // Redireciona para a versão Desktop
             var mobileUrl = "/mobile/MegaSistem-Mobile/MegaSistem-Mobile-main/index.html"; // Redireciona para a versão Mobile
 
-            // Redireciona com base no dispositivo
-            if (isMobile) {
-                window.location.href = mobileUrl; // Para celular
-            } else {
-                window.location.href = desktopUrl; // Para PC
-            }
+            // Aguarda um pequeno tempo para garantir a detecção do dispositivo
+            setTimeout(function() {
+                if (isMobile) {
+                    window.location.href = mobileUrl; // Para celular
+                } else {
+                    window.location.href = desktopUrl; // Para PC
+                }
+            }, 100); // Espera 100ms antes de redirecionar
         }
 
         // Chama a função assim que a página for carregada
