@@ -7,18 +7,25 @@
 </head>
 <body>
     <script>
-      window.onload = function() {
-        var largura = window.innerWidth;
-        var altura = window.innerHeight;
+  function isMobile() {
+    var userAgent = navigator.userAgent.toLowerCase();
+    // Checando se o User-Agent contém palavras que indicam dispositivos móveis
+    return /android|iphone|ipod|ipad|windows phone|blackberry|mobile|kindle|silk/i.test(userAgent);
+  }
 
-        if (largura < altura) {
-          window.location.href = 'indexmobile.html'; // Arquivo para celular
-        } else {
-          window.location.href = 'indexdesktop.html'; // Arquivo para desktop
-        }
-      };
-    </script>
+  window.onload = function() {
+    if (isMobile()) {
+      // Se for um dispositivo móvel
+      window.location.href = "indexmobile.html"; // Redireciona para a versão móvel
+    } else {
+      // Se for um dispositivo não móvel (desktop)
+      window.location.href = "indexdesktop.html"; // Redireciona para a versão desktop
+    }
+  };
+</script>
+
 </body>
 </html>
+
 
 
