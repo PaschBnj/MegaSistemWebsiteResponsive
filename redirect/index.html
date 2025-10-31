@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecionamento</title>
     <script>
-        // Função para verificar o dispositivo
+        // Função para verificar o dispositivo com base no tamanho da tela
         function redirectBasedOnDevice() {
-            // Verifica se o userAgent contém "Mobi", que é comum em dispositivos móveis
-            var isMobile = /Mobi|Android|iPhone|iPad|iPod|Windows Phone|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            // Verifica a largura da janela (tela) do dispositivo
+            var isMobile = window.innerWidth <= 768; // Largura de tela menor ou igual a 768px é um dispositivo móvel
 
             // URLs de redirecionamento
             var desktopUrl = "/desktop/MegaSistem/MegaSistem-main/index.html"; // Redireciona para a versão Desktop
