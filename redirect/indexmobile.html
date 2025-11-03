@@ -25,8 +25,13 @@
         font-style: normal;
       }
 
+      html {
+        overflow-y: hidden;
+      }
+    
       * {
         box-sizing: border-box; 
+        
       }
 
       body {
@@ -34,7 +39,6 @@
         margin: 0;
         font-family: "Montserrat", sans-serif;
         color: beige;
-        
       }
 
       #blobs-wrapper {
@@ -487,6 +491,15 @@
         margin: 0%;
         color: beige;
       }
+
+      #paragrafo-infos {
+        position: relative;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        font-size: 15px;
+        top: 140px;
+      }
       
       .section2 {
         position: absolute;
@@ -589,19 +602,14 @@
     <section class="section4" id="ContatoPage">
       <h1 id="quartotitulo">Quer saber mais? <br> Entre em contato conosco!</h1>
       <conteinter id="infos"></div>
-        <h2 class="infos" id="endereço">📍Nosso endereço</h2>
-        <p class="infos">Rua Marechal Deodoro da Fonseca, <br>1735 Parque Industrial <br>- São Jose do Rio Preto, SP <br>CEP: 15025-070</p>
-        <h2 class="infos" id="telefones">📞Telefones de contato</h2>
-        <p class="infos">Fixo: (17) 3212-2300<br>WhatsApp: (17) 99623-7020<br>Celular: (17) 99791-0201</p>
-        <h2 class="infos" id="email">✉️Nosso E-mail</h2>
-        <p class="infos">marcos@megasisteminformatica.com.br</p>
-        <h3 class="infos" id="horariodeatendimento">⏰horario de atendimento</h3>
-        <p class="infos">Segunda à Sexta: 8h às 18h</p>
+        <h2 id="paragrafo-infos">
+          📍Nosso endereço <br> <br>Rua Marechal Deodoro da Fonseca, <br>1735 Parque Industrial <br> São Jose do Rio Preto, SP <br> CEP: 15025-070 <br> <br> 📞Telefones de contato <br><br> Fixo: (17) 3212-2300 <br> WhatsApp: (17) 99623-7020 <br> Celular: (17) 99791-0201 <br> <br>✉️Nosso E-mail <br> <br> marcos@megasisteminformatica.com.br <br> <br> ⏰horario de atendimento <br> <br>Segunda à Sexta: 8h às 18h
+        </h2>
       </conteinter>
     </section>
   </body>
 </html>
-<script>
+<script> 
   function StraightToTop() {
     window.scrollTo({
       top: 0,
@@ -614,20 +622,3 @@
     section.scrollIntoView({ behavior: "smooth" });
   }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
